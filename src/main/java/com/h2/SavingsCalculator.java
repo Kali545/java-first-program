@@ -35,7 +35,7 @@ public class SavingsCalculator {
         int remainingDays = totalDaysInMonth - date.getDayOfMonth();
         return remainingDays;
     }
-    
+
     public static void main(String[] args){
         final String[] creditsAsString = args[0].split(",");
         final String[] debitsAsString = args[1].split(",");
