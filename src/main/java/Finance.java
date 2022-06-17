@@ -28,7 +28,7 @@ public class Finance {
 
         switch(command){
             case BEST_LOAN_RATES:
-                System.out.println("Finding bes load rates ...");
+                System.out.println("Finding best loan rates ...");
                 BestLoanRates.main(arguments);
                 return;
             case SAVINGS_CALCULATOR:
