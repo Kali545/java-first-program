@@ -13,10 +13,6 @@ public class MortgageCalculator {
         this.termInYears = termInYears;
         this.annualRate = annualRate;
     }
-    public String toString(){
-        DecimalFormat df = new DecimalFormat("####.00");
-        return "monthlyPayment: " + df.format(monthlyPayment);
-    }
 
     private int getNumberOfPayments(){
         return termInYears * 12;
@@ -30,11 +26,16 @@ public class MortgageCalculator {
         long P = loanAmount;
         float r = getMonthlyInterestRate();
         int n = getNumberOfPayments();
-        double M = M =  P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
-        M = this.monthlyPayment;
+        double M =  P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
+        this.monthlyPayment = M;
 
      }
-     public static void main(String[] args){
+    public String toString(){
+        DecimalFormat df = new DecimalFormat("####.00");
+        return "monthlyPayment: " + df.format(monthlyPayment);
+    }
+
+    public static void main(String[] args){
         long loanAmount = Long.parseLong(args[0]);
         int termInYears = Integer.parseInt(args[1]);
         float annualRate = Float.parseFloat(args[2]);
