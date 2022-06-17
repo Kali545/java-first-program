@@ -38,6 +38,7 @@ public class Finance {
             case MORTGAGE_CALCULATOR:
                 System.out.println("Finding your monthly payment ...");
                 MortgageCalculator.main(arguments);
+                return;
         }
 
     }
@@ -54,7 +55,7 @@ public class Finance {
             return;
         }
         executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
-        
+
     }
 
 }
